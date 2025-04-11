@@ -1,12 +1,10 @@
 ﻿<Project>
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
-
     <!-- metadata -->
     <Authors>T.D. Schreur</Authors>
     <Copyright>Copyright © T.D. Schreur</Copyright>
-    <AssemblyName>TDS.AzureFunction.$(MSBuildProjectName)</AssemblyName>
-    <RootNamespace>TDS.AzureFunction.$(MSBuildProjectName)</RootNamespace>
+    <AssemblyName>TDS.AspireFunction.$(MSBuildProjectName)</AssemblyName>
+    <RootNamespace>TDS.AspireFunction.$(MSBuildProjectName)</RootNamespace>
 
     <!-- strict null policy: all nullability issues are treated as errors -->
     <Nullable>enable</Nullable>

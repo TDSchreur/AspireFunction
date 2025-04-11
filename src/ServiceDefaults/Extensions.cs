@@ -8,7 +8,7 @@ using OpenTelemetry;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Trace;
 
-namespace TDS.AzureFunction.AspireFunction.ServiceDefaults;
+namespace TDS.AspireFunction.ServiceDefaults;
 
 // Adds common .NET Aspire services: service discovery, resilience, health checks, and OpenTelemetry.
 // This project should be referenced by each service project in your solution.
@@ -44,19 +44,19 @@ public static class Extensions
         });
 
         builder.Services.AddOpenTelemetry()
-            .WithMetrics(metrics =>
-            {
-                metrics.AddAspNetCoreInstrumentation()
-                    .AddHttpClientInstrumentation()
-                    .AddRuntimeInstrumentation();
-            })
-            .WithTracing(tracing =>
-            {
-                tracing.AddAspNetCoreInstrumentation()
-                    // Uncomment the following line to enable gRPC instrumentation (requires the OpenTelemetry.Instrumentation.GrpcNetClient package)
-                    //.AddGrpcClientInstrumentation()
-                    .AddHttpClientInstrumentation();
-            });
+               .WithMetrics(metrics =>
+               {
+                   metrics.AddAspNetCoreInstrumentation()
+                          .AddHttpClientInstrumentation()
+                          .AddRuntimeInstrumentation();
+               })
+               .WithTracing(tracing =>
+               {
+                   tracing.AddAspNetCoreInstrumentation()
+                          // Uncomment the following line to enable gRPC instrumentation (requires the OpenTelemetry.Instrumentation.GrpcNetClient package)
+                          //.AddGrpcClientInstrumentation()
+                          .AddHttpClientInstrumentation();
+               });
 
         builder.AddOpenTelemetryExporters();
 
@@ -85,8 +85,8 @@ public static class Extensions
     public static IHostApplicationBuilder AddDefaultHealthChecks(this IHostApplicationBuilder builder)
     {
         builder.Services.AddHealthChecks()
-            // Add a default liveness check to ensure app is responsive
-            .AddCheck("self", () => HealthCheckResult.Healthy(), ["live"]);
+               // Add a default liveness check to ensure app is responsive
+               .AddCheck("self", () => HealthCheckResult.Healthy(), ["live"]);
 
         return builder;
     }
@@ -101,10 +101,7 @@ public static class Extensions
             app.MapHealthChecks("/health");
 
             // Only health checks tagged with the "live" tag must pass for app to be considered alive
-            app.MapHealthChecks("/alive", new HealthCheckOptions
-            {
-                Predicate = r => r.Tags.Contains("live")
-            });
+            app.MapHealthChecks("/alive", new HealthCheckOptions { Predicate = r => r.Tags.Contains("live") });
         }
 
         return app;
