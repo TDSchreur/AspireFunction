@@ -1,0 +1,8 @@
+﻿<Project>
+    <!-- We do not need Husky in the build pipeline, only locally; the environment variable 'TF_BUILD' is set to 'true' by Azure Devops in the build pipeline -->
+    <Target Name="EnsureDotNetToolsInstalled" BeforeTargets="PreBuildEvent" Condition="'$(TF_BUILD)' != 'true'">
+        <Message Text="Executing dotnet tool restore" Importance="high"/>
+        <Exec Command="dotnet tool restore"/>
+        <Exec Command="dotnet husky install" WorkingDirectory="../../" />
+    </Target>
+</Project>

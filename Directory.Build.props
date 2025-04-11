@@ -1,0 +1,29 @@
+﻿<Project>
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+
+    <!-- metadata -->
+    <Authors>T.D. Schreur</Authors>
+    <Copyright>Copyright © T.D. Schreur</Copyright>
+    <AssemblyName>TDS.AzureFunction.$(MSBuildProjectName)</AssemblyName>
+    <RootNamespace>TDS.AzureFunction.$(MSBuildProjectName)</RootNamespace>
+
+    <!-- strict null policy: all nullability issues are treated as errors -->
+    <Nullable>enable</Nullable>
+    <WarningsAsErrors>true</WarningsAsErrors>
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <AnalysisLevel>latest</AnalysisLevel>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+        <PackageReference Include="SonarAnalyzer.CSharp">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+  </ItemGroup>
+</Project>

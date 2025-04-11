@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.0.0
+MinimumVisualStudioVersion = 17.8.0.0
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireFunction.AppHost", "src\AspireFunction.AppHost\AspireFunction.AppHost.csproj", "{BD8771BE-7F7C-4523-8724-E81E4A32D4C5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireFunction.ServiceDefaults", "src\AspireFunction.ServiceDefaults\AspireFunction.ServiceDefaults.csproj", "{10D0305F-739E-4ADC-A130-6500F919E926}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD8771BE-7F7C-4523-8724-E81E4A32D4C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD8771BE-7F7C-4523-8724-E81E4A32D4C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD8771BE-7F7C-4523-8724-E81E4A32D4C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD8771BE-7F7C-4523-8724-E81E4A32D4C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10D0305F-739E-4ADC-A130-6500F919E926}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10D0305F-739E-4ADC-A130-6500F919E926}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10D0305F-739E-4ADC-A130-6500F919E926}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10D0305F-739E-4ADC-A130-6500F919E926}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BADF447F-8636-4340-83E2-0BC1E52602B7}
+	EndGlobalSection
+EndGlobal
