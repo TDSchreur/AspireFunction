@@ -12,8 +12,8 @@ public static class Program
 
         builder.AddServiceDefaults();
 
-        builder.AddAzureQueueClient("queues");
-        builder.AddAzureBlobClient("blobs");
+        builder.AddAzureQueueServiceClient("queues");
+        builder.AddAzureBlobServiceClient("blobs");
 
         builder.ConfigureFunctionsWebApplication();
 
